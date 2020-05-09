@@ -22,7 +22,7 @@ export function getCode(
 
   const { name, constructor } = geometryMap[geometry];
 
-  return `import React, { useRef, useState } from 'react'
+  return `  import React, { useRef, useState } from 'react'
   import { Canvas, useFrame } from 'react-three-fiber'
   
   ${getBoxCode(name, constructor, material)}
@@ -56,13 +56,13 @@ function getAppCode(boxes: TBox[]): string {
         return <Canvas>
             <ambientLight />
             <pointLight position={[10, 10, 10]} />
-            ${boxes.map(getBoxLineCode).join("\n\t")}
+        ${boxes.map(getBoxLineCode).join("\n\t")}
         </Canvas>
     }`;
 }
 
 function getBoxLineCode(box: TBox): string {
-  return `<Box position={${JSON.stringify(box.position)}} rotationSpeed={${
+  return `    <Box position={${JSON.stringify(box.position)}} rotationSpeed={${
     box.rotationSpeed
   }} color="${box.color}" />`;
 }

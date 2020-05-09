@@ -34,21 +34,21 @@ export const prismTheme = css`
   .token.boolean,
   .token.number,
   .token.function {
-    color: #65ddd9;
+    color: #0e9aa7;
   }
 
   .token.property,
   .token.class-name,
   .token.constant,
   .token.symbol {
-    color: #ff767b;
+    color: #7f0000;
   }
 
   .token.important,
   .token.atrule,
   .token.keyword,
   .token.builtin {
-    color: #ffc312;
+    color: #f6cd61;
   }
 
   .token.string,
@@ -56,7 +56,7 @@ export const prismTheme = css`
   .token.attr-value,
   .token.regex,
   .token.variable {
-    color: #b9a7ff;
+    color: #7bc043;
   }
 
   .token.operator,

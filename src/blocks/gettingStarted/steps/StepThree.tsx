@@ -5,6 +5,7 @@ import colorPalette from "@styles/colorPalette";
 import { TBox } from "../code";
 
 let colors = [...colorPalette];
+colors.shift();
 let spawnXPositions = [6, -6, 12, -12];
 const maximumBoxes = 5;
 
