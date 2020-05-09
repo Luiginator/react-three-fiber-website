@@ -1,0 +1,23 @@
+$enable-flex: true;
+$enable-grid-classes: true;
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 600px,
+  md: 800px,
+  lg: 1000px,
+  xl: 1280px,
+);
+
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1300px,
+);
+
+* {
+  box-sizing: border-box;
+}
+
+@import "bootstrap/scss/bootstrap-grid.scss";

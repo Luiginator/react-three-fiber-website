@@ -1,3 +1,3 @@
-export default function Home() {
-  return <div>Test</div>;
-}
+import Index from "../src/pages/Home";
+
+export default Index;

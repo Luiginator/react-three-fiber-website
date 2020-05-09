@@ -8,8 +8,23 @@
     "start": "next start"
   },
   "dependencies": {
+    "@types/styled-components": "^5.1.0",
+    "@zeit/next-sass": "^1.0.1",
+    "bootstrap": "^4.4.1",
+    "lodash": "^4.17.15",
     "next": "9.3.6",
+    "nice-color-palettes": "^3.0.0",
+    "raw-loader": "^4.0.1",
     "react": "16.13.1",
-    "react-dom": "16.13.1"
+    "react-dom": "16.13.1",
+    "react-three-fiber": "^4.1.4",
+    "sass": "^1.26.5",
+    "styled-components": "^5.1.0",
+    "three": "^0.116.1"
+  },
+  "devDependencies": {
+    "@types/node": "^13.13.5",
+    "@types/react": "^16.9.34",
+    "typescript": "^3.8.3"
   }
 }
