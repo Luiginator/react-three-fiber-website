@@ -9,6 +9,9 @@ import { getCode } from "./code";
 import StepOne from "./steps/StepOne";
 import StepTwo from "./steps/StepTwo";
 import { StepThree } from "./steps/StepThree";
+import { Container } from "@components/Grid";
+import { H2 } from "@components/Typography";
+import Highlighted from "@components/Highlighted";
 
 let colors = [...colorPalette];
 const initialBoxes = [
@@ -22,6 +25,11 @@ export default function GettingStarted() {
 
   return (
     <GettingStartedSectionWrapper>
+      <Container>
+        <H2>
+          Getting started with <Highlighted>react-three-fiber</Highlighted>
+        </H2>
+      </Container>
       <Preview type={geometryType} material={material} boxes={boxes} />
       <CodeExplainer
         codeGroups={[
