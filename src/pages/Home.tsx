@@ -7,6 +7,7 @@ import PuzzleSVG from "@icons/puzzle";
 import PerformanceSVG from "@icons/performance";
 import ReactSVG from "@icons/react";
 import CrossPlatformSVG from "@icons/cross_platform";
+import GettingStarted from "src/blocks/gettingStarted";
 
 export default function Home() {
   return (
@@ -19,6 +20,7 @@ export default function Home() {
         headline="Build Threejs applications declaratively & with re-usable components"
         benefits={getLandingPageBenefits()}
       />
+      <GettingStarted />
     </PageTemplate>
   );
 }
