@@ -1,9 +1,9 @@
-import React, { useState } from "react";
+import React from "react";
 import styled from "styled-components";
 
-import { device } from "@styles/screens";
 import { Container, Column, Row } from "@components/Grid";
 import Benefit from "@components/Benefit";
+import { device } from "@styles/screens";
 import { space } from "@styles/spacing";
 import { fontSize } from "@styles/typography";
 import { color } from "@styles/colors";
