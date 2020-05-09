@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 
 import { device } from "@styles/screens";
+import { space } from "@styles/spacing";
 
 export default function StepOne() {
   return (
@@ -20,12 +21,12 @@ const Command = styled.span`
   background: rgba(102, 51, 153, 0.4);
   border-left: 3px solid rgba(102, 51, 153, 1);
   color: #666;
-  padding: 0.5rem 3.5rem 0.5rem 25px;
+  padding: ${space.small} ${space.large} ${space.small} ${space.medium};
   border-radius: 0 3px 3px 0;
   font-weight: bold;
   position: relative;
   display: table;
-  margin: 0.6rem 0;
+  margin: ${space.small} 0;
   color: white;
 
   &::before {

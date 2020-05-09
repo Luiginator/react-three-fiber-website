@@ -4,6 +4,8 @@ import { rgba } from "polished";
 
 import Prism from "./prism.js";
 import { prismTheme } from "./prismTheme";
+import { space } from "@styles/spacing";
+import { fontSize } from "@styles/typography";
 
 type TCodeProps = {
   readonly code: string;
@@ -58,11 +60,11 @@ export default function Code({
 
 export const CodeWrapper = styled.div`
   flex: 1;
-  padding: 1em 0;
+  padding: ${space.small} 0;
   overflow: auto;
   background: rgba(102, 51, 153, 0.1);
   color: #2c3e50;
-  font-size: 16px;
+  font-size: ${fontSize.small};
   border-radius: 15px 0 0 5px;
   background: #334150;
 
@@ -71,7 +73,7 @@ export const CodeWrapper = styled.div`
 
 const CodeLine = styled.pre<{ isHighlighted: boolean; highlightColor: string }>`
   position: relative;
-  padding: 0 15px;
+  padding: 0 ${space.small};
   display: flex;
   align-items: baseline;
   cursor: text;

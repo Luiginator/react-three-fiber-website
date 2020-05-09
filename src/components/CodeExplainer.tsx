@@ -7,6 +7,8 @@ import { rgba } from "polished";
 
 import { device } from "@styles/screens";
 import colorPalette from "@styles/colorPalette";
+import { space } from "@styles/spacing";
+import { fontSize } from "@styles/typography";
 
 type TCodeGroup = {
   lines: number[];
@@ -115,7 +117,7 @@ const CodeHintListItemStyled = styled.div<{ highlighted: boolean }>`
   flex-direction: row;
   justify-content: flex-start;
   padding: 5px;
-  padding-left: 10px;
+  padding-left: ${space.small};
   align-items: center;
   border-radius: 5px 5px 0 0;
   font-weight: bold;
@@ -129,7 +131,7 @@ const CodeHintListItemTextStyled = styled.div`
   padding-left: 70px;
   padding-bottom: 5px;
   max-width: 700px;
-  font-size: 16px;
+  font-size: ${fontSize.small};
   line-height: 1.7rem;
 `;
 
@@ -144,12 +146,12 @@ const ItemCount = styled.div<{ color: string }>`
   justify-content: center;
   align-items: center;
   font-weight: bold;
-  font-size: 20px;
+  font-size: ${fontSize.large};
 `;
 
 const ItemText = styled.div`
-  font-size: 20px;
-  padding-left: 15px;
+  font-size: ${fontSize.large};
+  padding-left: ${space.small};
   color: white;
 `;
 

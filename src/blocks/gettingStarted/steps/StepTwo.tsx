@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { fontSize } from "@styles/typography";
 
 type TStepTwoProps = {
   readonly onGeometryChange: (geometry: string) => void;
@@ -38,7 +39,7 @@ export default function StepTwo({
 }
 
 const Select = styled.select`
-  font-size: 16px;
+  font-size: ${fontSize.small};
   margin: 0 5px;
 
   &:focus {

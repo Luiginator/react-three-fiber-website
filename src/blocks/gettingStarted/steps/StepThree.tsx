@@ -3,6 +3,9 @@ import styled from "styled-components";
 import { random } from "lodash";
 import colorPalette from "@styles/colorPalette";
 import { TBox } from "../code";
+import { space } from "@styles/spacing";
+import { color } from "@styles/colors";
+import { fontSize } from "@styles/typography";
 
 let colors = [...colorPalette];
 colors.shift();
@@ -100,26 +103,27 @@ export function StepThree({ boxes, setBoxes }) {
 const Box = styled.div<{ color: string }>`
   width: 110px;
   height: 120px;
-  background: white;
-  margin: 10px;
+  background: ${color.lightPrimary};
+  margin: ${space.small};
+  margin-left: 0;
   border-radius: 10px;
   border: 5px solid ${(props) => props.color};
-  color: black;
+  color: ${color.darkPrimary};
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding-left: 15px;
+  padding-left: ${space.small};
 `;
 
 const AddBox = styled.div`
   width: 50px;
   height: 120px;
-  font-size: 30px;
+  font-size: ${fontSize.large};
   display: flex;
   justify-content: center;
   align-items: center;
   border: 2px solid white;
-  margin: 10px 0;
+  margin: ${space.small} 0;
   border-radius: 10px;
   cursor: pointer;
 `;
@@ -139,9 +143,9 @@ const BoxProperty = styled.div`
   }
 
   input {
-    margin-bottom: 5px;
+    margin-bottom: ${space.small};
     width: 50px;
-    font-size: 18px;
+    font-size: ${fontSize.small};
     text-align: right;
   }
 `;
