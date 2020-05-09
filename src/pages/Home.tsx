@@ -1,11 +1,14 @@
 import React from "react";
-import ShowcaseSlider from "@components/Showcase";
 import PageTemplate from "../PageTemplate";
+import HeroSlider from "src/blocks/HeroSlider";
 
 export default function Home() {
   return (
     <PageTemplate>
-      <ShowcaseSlider />
+      <HeroSlider
+        headline="React three fiber"
+        subheadline="is a react renderer for three.js"
+      />
     </PageTemplate>
   );
 }

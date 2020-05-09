@@ -6,13 +6,22 @@ import { partial } from "lodash";
 import { device } from "@styles/screens";
 import { fontSize } from "@styles/typography";
 import { color } from "@styles/colors";
+import { space } from "@styles/spacing";
 
-const Swarm = dynamic(() => import("../examples/swarm"), { ssr: false });
-const RotatingBoxes = dynamic(() => import("../examples/rotating_boxes"), {
-  ssr: false,
-});
+const exampleImportOptions = { ssr: false };
 
-const showcases = [
+const Swarm = dynamic(() => import("../examples/swarm"), exampleImportOptions);
+const RotatingBoxes = dynamic(
+  () => import("../examples/rotating_boxes"),
+  exampleImportOptions
+);
+
+type TShowcase = {
+  readonly component: React.ComponentType<{}>;
+  readonly name: string;
+};
+
+const showcases: TShowcase[] = [
   { component: Swarm, name: "Swarm" },
   { component: RotatingBoxes, name: "Instanced Mesh" },
 ];
@@ -24,10 +33,7 @@ export default function ShowcaseSlider() {
   const Component = activeStep.component;
   const name = activeStep.name;
 
-  const renderShowcaseStep = (
-    _: React.ReactNode,
-    i: number
-  ): React.ReactNode => {
+  const renderShowcaseStep = (_: TShowcase, i: number): React.ReactNode => {
     return (
       <StepBullet active={step === i} key={i} onClick={partial(setStep, i)} />
     );
@@ -51,7 +57,7 @@ const Showcase = styled.div`
   canvas {
     height: 100vh;
     width: 100vw;
-    padding: 25px;
+    padding: ${space.small};
   }
 `;
 
