@@ -20,6 +20,17 @@ type TBenefitsProps = {
 };
 
 export default function Benefits({ headline, benefits }: TBenefitsProps) {
+  const renderBenefit = (
+    { icon, title, description }: TBenefit,
+    i: number
+  ): React.ReactNode => {
+    return (
+      <Column className="col-12 col-lg-6" key={i}>
+        <Benefit icon={icon} title={title} description={description} />
+      </Column>
+    );
+  };
+
   return (
     <Container>
       <BenefitsRow>
@@ -27,13 +38,7 @@ export default function Benefits({ headline, benefits }: TBenefitsProps) {
           <Headline>{headline}</Headline>
         </Column>
         <Column className="col-12 col-lg-8">
-          <Row>
-            {benefits.map(({ icon, title, description }) => (
-              <Column className="col-12 col-lg-6">
-                <Benefit icon={icon} title={title} description={description} />
-              </Column>
-            ))}
-          </Row>
+          <Row>{benefits.map(renderBenefit)}</Row>
         </Column>
       </BenefitsRow>
     </Container>
