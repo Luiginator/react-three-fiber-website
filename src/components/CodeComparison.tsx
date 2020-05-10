@@ -5,7 +5,9 @@ import { partialRight } from 'lodash';
 import Code from './code/Code';
 import Sankey from './Sankey';
 import colorPalette from '@styles/colorPalette';
-import { device } from '@styles/screens';
+import { space } from '@styles/spacing';
+import { fontSize } from '@styles/typography';
+import { color } from '@styles/colors';
 
 type TCodeComparisonProps = {
   readonly codeLeft: string;
@@ -78,25 +80,22 @@ export default function CodeComparison({
 }
 
 const CodeComparisonWrapper = styled.div`
-  display: none;
-
-  ${device.large} {
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-  }
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: center;
 `;
 
 const CodeStyled = styled(Code)`
   code {
-    margin-right: 25px;
+    margin-right: ${space.medium};
   }
 `;
 
 const CodeTitle = styled.div`
-  color: white;
+  color: ${color.lightPrimary};
   font-weight: bold;
-  font-size: 24px;
-  padding-bottom: 15px;
+  font-size: ${fontSize.large};
+  padding-bottom: ${space.small};
   text-align: center;
 `;

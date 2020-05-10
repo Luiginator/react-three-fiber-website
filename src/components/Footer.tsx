@@ -74,7 +74,7 @@ function IconAuthor({ url, name }) {
 }
 
 const IconAuthorWrapper = styled.div`
-  padding-top: 15px;
+  padding-top: ${space.small};
 `;
 
 const DialogWrapper = styled.div`

@@ -35,10 +35,10 @@ export default function CommunityResources({
 }
 
 const CommunityResourceWrapper = styled(Container)`
-  padding: ${space.large} 15px;
+  padding: ${space.large} ${space.small};
 
   ${device.large} {
-    padding: ${space.large} 15px;
+    padding: ${space.large} ${space.small};
   }
 `;
 

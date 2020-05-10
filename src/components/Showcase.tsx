@@ -100,7 +100,7 @@ const StepBullet = styled.div<{ active: boolean }>`
   width: 20px;
   height: 20px;
   border-radius: 100%;
-  margin-left: 15px;
+  margin-left: ${space.small};
   transition: all 100ms linear;
   cursor: pointer;
 

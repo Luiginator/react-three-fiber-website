@@ -5,6 +5,7 @@ import { device } from '@styles/screens';
 import GithubBadge from '@components/GithubBadge';
 import Footer from '@components/Footer';
 import useWindowScrollPosition from './hooks/useScrollPosition';
+import { color } from '@styles/colors';
 
 type TPageTemplateProps = {
   readonly children: React.ReactNode;
@@ -28,7 +29,7 @@ const GithubLogoPosition = styled.div<{ large: boolean }>`
   position: fixed;
 
   width: ${(props) => (props.large ? '180px' : '130px')};
-  background: black;
+  background: ${color.darkPrimary};
   transition: all 300ms linear;
   z-index: 1000;
   right: 0;
@@ -36,7 +37,7 @@ const GithubLogoPosition = styled.div<{ large: boolean }>`
 
   ${device.large} {
     top: 0;
-    right: 5rem;
+    right: 50px;
     width: ${(props) => (props.large ? '220px' : '150px')};
   }
 `;
