@@ -1,6 +1,6 @@
-import React, { useRef } from "react";
-import { rgba } from "polished";
-import colorPalette from "@styles/colorPalette";
+import React, { useRef } from 'react';
+import { rgba } from 'polished';
+import colorPalette from '@styles/colorPalette';
 
 const sankeyStartY = -34;
 const sankeyStartX = 0;
@@ -13,8 +13,8 @@ export default function Sankey({ codeLinks, handleHoverElement }) {
       link.source[0],
       link.source.length,
       link.target[0],
-      link.target.length
-    )
+      link.target.length,
+    ),
   );
 
   return (

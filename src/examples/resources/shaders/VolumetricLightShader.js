@@ -1,4 +1,4 @@
-import * as THREE from 'three'
+import * as THREE from 'three';
 
 export default {
   uniforms: {
@@ -46,4 +46,4 @@ export default {
       gl_FragColor = color * exposure;
     }
   `,
-}
+};

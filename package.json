@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "tslint -c tslint.json 'src/**/*.{ts,tsx,js}'"
+    "lint": "tslint -c tslint.json 'src/**/*.{ts,tsx,js}'",
+    "prettier": "prettier"
   },
   "dependencies": {
     "@types/styled-components": "^5.1.0",

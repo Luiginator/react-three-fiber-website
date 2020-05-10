@@ -1,8 +1,8 @@
-import { css } from "styled-components";
+import { css } from 'styled-components';
 
 export const prismTheme = css`
-  code[class*="language-"],
-  pre[class*="language-"] {
+  code[class*='language-'],
+  pre[class*='language-'] {
     color: #f2f2f7;
     background: none;
   }
@@ -81,13 +81,13 @@ export const prismTheme = css`
     color: green;
   }
 
-  pre[class*="language-"].line-numbers {
+  pre[class*='language-'].line-numbers {
     position: relative;
     padding-left: 3.8em;
     counter-reset: linenumber;
   }
 
-  pre[class*="language-"].line-numbers > code {
+  pre[class*='language-'].line-numbers > code {
     position: relative;
     white-space: inherit;
   }

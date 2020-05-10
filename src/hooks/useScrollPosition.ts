@@ -1,15 +1,15 @@
-import { useState, useEffect } from "react";
-import { throttle } from "lodash";
+import { useState, useEffect } from 'react';
+import { throttle } from 'lodash';
 
 let supportsPassive = false;
 try {
-  var opts = Object.defineProperty({}, "passive", {
+  var opts = Object.defineProperty({}, 'passive', {
     get: function () {
       supportsPassive = true;
     },
   });
-  window.addEventListener("testPassive", null, opts);
-  window.removeEventListener("testPassive", null, opts);
+  window.addEventListener('testPassive', null, opts);
+  window.removeEventListener('testPassive', null, opts);
 } catch (e) {}
 
 let getPosition = () => ({
@@ -34,14 +34,14 @@ function useWindowScrollPosition(options?: any) {
     }, opts.throttle);
 
     window.addEventListener(
-      "scroll",
+      'scroll',
       handleScroll,
-      supportsPassive ? { passive: true } : false
+      supportsPassive ? { passive: true } : false,
     );
 
     return () => {
       handleScroll.cancel();
-      window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener('scroll', handleScroll);
     };
   }, []);
 

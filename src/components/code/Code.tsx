@@ -1,11 +1,11 @@
-import React, { useRef, useEffect } from "react";
-import styled from "styled-components";
-import { rgba } from "polished";
+import React, { useRef, useEffect } from 'react';
+import styled from 'styled-components';
+import { rgba } from 'polished';
 
-import Prism from "./prism.js";
-import { prismTheme } from "./prismTheme";
-import { space } from "@styles/spacing";
-import { fontSize } from "@styles/typography";
+import Prism from './prism.js';
+import { prismTheme } from './prismTheme';
+import { space } from '@styles/spacing';
+import { fontSize } from '@styles/typography';
 
 type TCodeProps = {
   readonly code: string;
@@ -51,7 +51,7 @@ export default function Code({
   return (
     <CodeWrapper className={className}>
       <div className="language-javascript" ref={wrapper}>
-        {code.split("\n").map(renderCodeLine)}
+        {code.split('\n').map(renderCodeLine)}
       </div>
     </CodeWrapper>
   );
@@ -86,8 +86,8 @@ const CodeLine = styled.pre<{ isHighlighted: boolean; highlightColor: string }>`
   }};
   transition: all 200ms linear;
 
-  code[class*="language-"],
-  pre[class*="language-"] {
+  code[class*='language-'],
+  pre[class*='language-'] {
     background: none;
   }
   &:hover {

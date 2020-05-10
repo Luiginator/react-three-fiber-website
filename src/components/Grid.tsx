@@ -1,5 +1,5 @@
-import React from "react";
-import cn from "classnames";
+import React from 'react';
+import cn from 'classnames';
 
 export function Column(props) {
   return <div className={props.className}>{props.children}</div>;
@@ -7,7 +7,7 @@ export function Column(props) {
 
 export function Container(props) {
   return (
-    <div className={cn("container", props.className)}>{props.children}</div>
+    <div className={cn('container', props.className)}>{props.children}</div>
   );
 }
 

@@ -1,12 +1,12 @@
-import React from "react";
-import styled from "styled-components";
+import React from 'react';
+import styled from 'styled-components';
 
-import { Container, Column, Row } from "@components/Grid";
-import Benefit from "@components/Benefit";
-import { device } from "@styles/screens";
-import { space } from "@styles/spacing";
-import { fontSize } from "@styles/typography";
-import { color } from "@styles/colors";
+import { Container, Column, Row } from '@components/Grid';
+import Benefit from '@components/Benefit';
+import { device } from '@styles/screens';
+import { space } from '@styles/spacing';
+import { fontSize } from '@styles/typography';
+import { color } from '@styles/colors';
 
 export type TBenefit = {
   readonly icon: React.ReactNode;
@@ -22,7 +22,7 @@ type TBenefitsProps = {
 export default function Benefits({ headline, benefits }: TBenefitsProps) {
   const renderBenefit = (
     { icon, title, description }: TBenefit,
-    i: number
+    i: number,
   ): React.ReactNode => {
     return (
       <Column className="col-12 col-lg-6" key={i}>

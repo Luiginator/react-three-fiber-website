@@ -64,6 +64,6 @@ var WaterShader = {
       }
     }`,
   ].join('\n'),
-}
+};
 
-export { WaterShader }
+export { WaterShader };

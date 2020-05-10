@@ -1,4 +1,4 @@
-import { ShaderMaterial, BackSide } from 'three'
+import { ShaderMaterial, BackSide } from 'three';
 
 export default class RefractionMaterial extends ShaderMaterial {
   constructor(options) {
@@ -21,6 +21,6 @@ export default class RefractionMaterial extends ShaderMaterial {
         gl_FragColor = vec4(worldNormal, 1.0);
       }`,
       side: BackSide,
-    })
+    });
   }
 }

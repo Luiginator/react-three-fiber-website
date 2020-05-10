@@ -1,8 +1,8 @@
-import React from "react";
-import styled from "styled-components";
+import React from 'react';
+import styled from 'styled-components';
 
-import { device } from "@styles/screens";
-import { space } from "@styles/spacing";
+import { device } from '@styles/screens';
+import { space } from '@styles/spacing';
 
 export default function StepOne() {
   return (
@@ -32,7 +32,7 @@ const Command = styled.span`
   &::before {
     position: absolute;
     left: 10px;
-    content: "$";
+    content: '$';
   }
 
   ${device.extraLarge} {

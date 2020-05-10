@@ -1,7 +1,7 @@
-import React from "react";
-import styled from "styled-components";
-import ShowcaseSlider from "@components/Showcase";
-import HeroBox from "@components/HeroBox";
+import React from 'react';
+import styled from 'styled-components';
+import ShowcaseSlider from '@components/Showcase';
+import HeroBox from '@components/HeroBox';
 
 type THeroSliderProps = {
   readonly headline: string;

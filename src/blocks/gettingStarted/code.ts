@@ -7,16 +7,16 @@ export type TBox = {
 export function getCode(
   geometry: string,
   material: string,
-  boxes: TBox[]
+  boxes: TBox[],
 ): string {
   const geometryMap = {
     box: {
-      name: "boxBufferGeometry",
-      constructor: "[1, 1, 1]",
+      name: 'boxBufferGeometry',
+      constructor: '[1, 1, 1]',
     },
     cylinder: {
-      name: "cylinderBufferGeometry",
-      constructor: "[2, 2, 2, 30]",
+      name: 'cylinderBufferGeometry',
+      constructor: '[2, 2, 2, 30]',
     },
   };
 
@@ -56,7 +56,7 @@ function getAppCode(boxes: TBox[]): string {
         return <Canvas>
             <ambientLight />
             <pointLight position={[10, 10, 10]} />
-        ${boxes.map(getBoxLineCode).join("\n\t")}
+        ${boxes.map(getBoxLineCode).join('\n\t')}
         </Canvas>
     }`;
 }

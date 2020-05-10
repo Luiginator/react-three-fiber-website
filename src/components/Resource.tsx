@@ -1,8 +1,8 @@
-import React from "react";
-import styled from "styled-components";
-import { fontSize } from "@styles/typography";
-import { space } from "@styles/spacing";
-import { color } from "@styles/colors";
+import React from 'react';
+import styled from 'styled-components';
+import { fontSize } from '@styles/typography';
+import { space } from '@styles/spacing';
+import { color } from '@styles/colors';
 
 export type TResource = {
   readonly title: string;

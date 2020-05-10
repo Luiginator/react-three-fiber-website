@@ -1,4 +1,4 @@
-import { ShaderMaterial } from 'three'
+import { ShaderMaterial } from 'three';
 
 export default class RefractionMaterial extends ShaderMaterial {
   constructor(options) {
@@ -63,12 +63,12 @@ export default class RefractionMaterial extends ShaderMaterial {
       
         gl_FragColor = vec4(color.rgb, 1.0);
       }`,
-    })
+    });
 
     this.uniforms = {
       envMap: { value: options.envMap },
       backfaceMap: { value: options.backfaceMap },
       resolution: { value: options.resolution },
-    }
+    };
   }
 }

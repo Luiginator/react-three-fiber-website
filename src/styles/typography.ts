@@ -5,4 +5,4 @@ export const fontSize = {
   xLarge: '28px',
   xxLarge: '40px',
   xxxLarge: '76px',
-}
+};

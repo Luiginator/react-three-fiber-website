@@ -1,11 +1,11 @@
-import React, { useState } from "react";
-import styled from "styled-components";
-import { partialRight } from "lodash";
+import React, { useState } from 'react';
+import styled from 'styled-components';
+import { partialRight } from 'lodash';
 
-import Code from "./code/Code";
-import Sankey from "./Sankey";
-import colorPalette from "@styles/colorPalette";
-import { device } from "@styles/screens";
+import Code from './code/Code';
+import Sankey from './Sankey';
+import colorPalette from '@styles/colorPalette';
+import { device } from '@styles/screens';
 
 type TCodeComparisonProps = {
   readonly codeLeft: string;
@@ -27,19 +27,19 @@ export default function CodeComparison({
 
   const handleHoverLine = (
     line: number,
-    section: "source" | "target"
+    section: 'source' | 'target',
   ): void => {
     const selection = comparisons.findIndex(
-      (comparison) => comparison[section].indexOf(line + 1) > -1
+      (comparison) => comparison[section].indexOf(line + 1) > -1,
     );
 
     setActiveSelection(selection);
   };
 
   const renderCode = (
-    section: "source" | "target",
+    section: 'source' | 'target',
     title: string,
-    code: string
+    code: string,
   ): React.ReactNode => {
     return (
       <div>
@@ -68,9 +68,9 @@ export default function CodeComparison({
 
   return (
     <CodeComparisonWrapper>
-      {renderCode("source", "ThreeJS", codeLeft)}
+      {renderCode('source', 'ThreeJS', codeLeft)}
       {renderSankey()}
-      {renderCode("target", "react-three-fiber", codeRight)}
+      {renderCode('target', 'react-three-fiber', codeRight)}
     </CodeComparisonWrapper>
   );
 }

@@ -1,12 +1,12 @@
-import React from "react";
-import styled from "styled-components";
+import React from 'react';
+import styled from 'styled-components';
 
-import { fontSize } from "@styles/typography";
-import { Container, Row, Column } from "@components/Grid";
-import Resource, { TResource } from "@components/Resource";
-import { H2Dark } from "@components/Typography";
-import { space } from "@styles/spacing";
-import { device } from "@styles/screens";
+import { fontSize } from '@styles/typography';
+import { Container, Row, Column } from '@components/Grid';
+import Resource, { TResource } from '@components/Resource';
+import { H2Dark } from '@components/Typography';
+import { space } from '@styles/spacing';
+import { device } from '@styles/screens';
 
 type TCommunityResourcesProps = {
   readonly resources: { title: string; entries: TResource[] }[];

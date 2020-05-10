@@ -1,9 +1,14 @@
 // Icons erstellt von <a href="https://www.flaticon.com/de/autoren/xnimrodx" title="xnimrodx">xnimrodx</a> from <a href="https://www.flaticon.com/de/" title="Flaticon"> www.flaticon.com</a>
-import React from 'react'
+import React from 'react';
 
 export default function CrossPlatform() {
   return (
-    <svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="512"
+      height="512"
+      viewBox="0 0 512 512"
+    >
       <g>
         <path d="M64,400H40a8,8,0,0,0,0,16H64a8,8,0,0,0,0-16Z" />
         <path d="M96,400H88a8,8,0,0,0,0,16h8a8,8,0,0,0,0-16Z" />
@@ -12,5 +17,5 @@ export default function CrossPlatform() {
         <circle cx="392" cy="408" r="8" />
       </g>
     </svg>
-  )
+  );
 }
