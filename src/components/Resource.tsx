@@ -16,7 +16,7 @@ export default function Resource({ title, description, url }: TResourceProps) {
   const hostname = new URL(url).hostname;
 
   return (
-    <ResourceWrapper href={url} target="_blank">
+    <ResourceWrapper href={url} target="_blank" rel="noreferrer">
       <ResourceTitle>{title}</ResourceTitle>
       <ResourceDescription>{description}</ResourceDescription>
       <ResourceUrl>{hostname}</ResourceUrl>

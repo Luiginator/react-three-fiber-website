@@ -41,7 +41,7 @@ export const prismTheme = css`
   .token.class-name,
   .token.constant,
   .token.symbol {
-    color: #7f0000;
+    color: #0e9aa7;
   }
 
   .token.important,

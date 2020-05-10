@@ -11,8 +11,11 @@ import StepTwo from "./steps/StepTwo";
 import { StepThree } from "./steps/StepThree";
 import { Container } from "@components/Grid";
 import { H2 } from "@components/Typography";
-import Highlighted from "@components/Highlighted";
 import { space } from "@styles/spacing";
+import CodeComparison from "@components/CodeComparison";
+
+import threejsCode from "./Three.raw";
+import reactThreeFiberCode from "./ReactThreeFiber.raw";
 
 let colors = [...colorPalette];
 const initialBoxes = [
@@ -27,9 +30,7 @@ export default function GettingStarted() {
   return (
     <GettingStartedSectionWrapper>
       <Container>
-        <H2>
-          Getting started with <Highlighted>react-three-fiber</Highlighted>
-        </H2>
+        <H2>Getting started with react-three-fiber</H2>
       </Container>
       <Preview type={geometryType} material={material} boxes={boxes} />
       <CodeExplainer
@@ -69,9 +70,38 @@ export default function GettingStarted() {
         ]}
         code={getCode(geometryType, material, boxes)}
       />
+      <Container>
+        <H2 style={{ marginTop: "100px" }}>
+          From Threejs to react-three-fiber
+        </H2>
+        <CodeComparison
+          codeLeft={threejsCode}
+          codeRight={reactThreeFiberCode}
+          comparisons={codeComparisons}
+        />
+      </Container>
     </GettingStartedSectionWrapper>
   );
 }
+
+const codeComparisons = [
+  {
+    source: [10],
+    target: [16],
+  },
+  {
+    source: [11],
+    target: [17],
+  },
+  {
+    source: [17, 18, 19, 20, 21, 22, 23, 24],
+    target: [8],
+  },
+  {
+    source: [2],
+    target: [5, 6],
+  },
+];
 
 const GettingStartedSectionWrapper = styled.div`
   background: black;

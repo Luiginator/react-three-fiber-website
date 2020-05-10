@@ -38,7 +38,6 @@ export default function Code({
     return (
       <CodeLine
         key={index}
-        id={`CodeLine-${index + 1}`}
         highlightColor={highlightColor}
         isHighlighted={isHighlighted}
         onMouseOver={() => handleCodeLineMouseOver(index)}

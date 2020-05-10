@@ -5,7 +5,6 @@ import { fontSize } from "@styles/typography";
 import { Container, Row, Column } from "@components/Grid";
 import Resource, { TResource } from "@components/Resource";
 import { H2Dark } from "@components/Typography";
-import Highlighted from "@components/Highlighted";
 import { space } from "@styles/spacing";
 import { device } from "@styles/screens";
 
@@ -18,9 +17,7 @@ export default function CommunityResources({
 }: TCommunityResourcesProps) {
   return (
     <CommunityResourceWrapper>
-      <H2Dark>
-        How to <Highlighted>proceed?</Highlighted>
-      </H2Dark>
+      <H2Dark>How to proceed?</H2Dark>
       <Row>
         {resources.map((resourceColumn) => (
           <Column className="col-12 col-lg-4">
