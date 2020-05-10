@@ -41,7 +41,7 @@ const CommunityResourceWrapper = styled(Container)`
   padding: ${space.large} 15px;
 
   ${device.large} {
-    padding: ${space.extraLarge} 15px;
+    padding: ${space.large} 15px;
   }
 `;
 
