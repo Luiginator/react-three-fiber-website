@@ -1,11 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
 import { random } from 'lodash';
-import colorPalette from '@styles/colorPalette';
+
 import { TBox } from '../code';
-import { space } from '@styles/spacing';
-import { color } from '@styles/colors';
-import { fontSize } from '@styles/typography';
+import { color, colorPalette, fontSize, space } from '@styles';
 
 const colors = [...colorPalette];
 colors.shift();

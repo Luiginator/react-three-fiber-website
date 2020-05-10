@@ -3,10 +3,7 @@ import styled from 'styled-components';
 
 import { Container, Column, Row } from '@components/Grid';
 import Benefit from '@components/Benefit';
-import { device } from '@styles/screens';
-import { space } from '@styles/spacing';
-import { fontSize } from '@styles/typography';
-import { color } from '@styles/colors';
+import { color, device, fontSize, space } from '@styles';
 
 export type TBenefit = {
   readonly icon: React.ReactNode;

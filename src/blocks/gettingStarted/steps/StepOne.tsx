@@ -1,8 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import { device } from '@styles/screens';
-import { space } from '@styles/spacing';
+import { device, space } from '@styles';
 
 export default function StepOne() {
   return (

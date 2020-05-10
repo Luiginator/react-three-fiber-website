@@ -1,10 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import { fontSize } from '@styles/typography';
-import { device } from '@styles/screens';
-import { space } from '@styles/spacing';
-import { color } from '@styles/colors';
+import { color, device, fontSize, space } from '@styles';
 
 type THeroBoxProps = {
   readonly headline: string;

@@ -5,8 +5,7 @@ import { partial } from 'lodash';
 
 import Prism from './prism.js';
 import { prismTheme } from './prismTheme';
-import { space } from '@styles/spacing';
-import { fontSize } from '@styles/typography';
+import { fontSize, space } from '@styles';
 
 type TCodeProps = {
   readonly code: string;

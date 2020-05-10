@@ -4,10 +4,7 @@ import { partialRight } from 'lodash';
 
 import Code from './code/Code';
 import Sankey from './Sankey';
-import colorPalette from '@styles/colorPalette';
-import { space } from '@styles/spacing';
-import { fontSize } from '@styles/typography';
-import { color } from '@styles/colors';
+import { color, colorPalette, fontSize, space } from '@styles';
 
 type TCodeComparisonProps = {
   readonly codeLeft: string;

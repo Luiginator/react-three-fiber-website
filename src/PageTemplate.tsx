@@ -1,11 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import { device } from '@styles/screens';
 import GithubBadge from '@components/GithubBadge';
 import Footer from '@components/Footer';
 import useWindowScrollPosition from './hooks/useScrollPosition';
-import { color } from '@styles/colors';
+import { color, device } from '@styles';
 
 type TPageTemplateProps = {
   readonly children: React.ReactNode;

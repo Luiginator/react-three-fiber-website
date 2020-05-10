@@ -1,15 +1,10 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
 import { partial } from 'lodash';
-
-import Code from './code/Code';
 import { rgba } from 'polished';
 
-import { device } from '@styles/screens';
-import colorPalette from '@styles/colorPalette';
-import { space } from '@styles/spacing';
-import { fontSize } from '@styles/typography';
-import { color } from '@styles/colors';
+import Code from './code/Code';
+import { color, colorPalette, device, fontSize, space } from '@styles';
 
 type TCodeGroup = {
   lines: number[];

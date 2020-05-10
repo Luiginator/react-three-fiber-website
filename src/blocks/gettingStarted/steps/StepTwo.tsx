@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
-import { fontSize } from '@styles/typography';
+
+import { fontSize } from '@styles';
 
 type TStepTwoProps = {
   readonly onGeometryChange: (geometry: string) => void;

@@ -1,10 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import { device } from '@styles/screens';
-import { color } from '@styles/colors';
-import { fontSize } from '@styles/typography';
-import { space } from '@styles/spacing';
+import { color, device, fontSize, space } from '@styles';
 
 export type TBenefitProps = {
   readonly icon: React.ReactNode;
