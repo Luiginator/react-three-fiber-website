@@ -6,7 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "tslint -c tslint.json 'src/**/*.{ts,tsx,js}'",
+    "lint": "tslint -c tslint.json 'src/**/*.{ts,tsx}'",
     "lint-fix": "tslint --fix -c tslint.json 'src/**/*.{ts,tsx}' -t verbose",
     "prettier": "prettier"
   },
