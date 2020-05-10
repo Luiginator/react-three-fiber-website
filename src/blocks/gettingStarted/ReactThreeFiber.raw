@@ -1,0 +1,20 @@
+import React, { useRef, useState } from 'react'
+import { Canvas, useFrame } from 'react-three-fiber'
+
+function Box({ position, rotationSpeed, color }) {
+  const mesh = useRef()
+  const [active, setActive] = useState(false)
+
+  useFrame(() => (mesh.current.rotation.x = mesh.current.rotation.y += rotationSpeed / 100))
+
+  return (
+    <mesh
+      position={position}
+      ref={mesh}
+      scale={active ? [1.5, 1.5, 1.5] : [1, 1, 1]}
+      onClick={(e) => setActive(!active)}>
+      <BoxBufferGeometry attach="geometry" args={[1, 1, 1]} />
+      <basicMaterial attach="material" color={color} />
+    </mesh>
+  )
+}

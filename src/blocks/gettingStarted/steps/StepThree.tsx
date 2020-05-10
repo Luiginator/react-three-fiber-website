@@ -80,8 +80,13 @@ export function StepThree({ boxes, setBoxes }) {
   ): React.ReactNode => {
     return (
       <BoxProperty>
-        <label>{label}:</label>
-        <input type="number" value={value} onChange={onChange}></input>
+        <label htmlFor={label}>{label}:</label>
+        <input
+          type="number"
+          id={label}
+          value={value}
+          onChange={onChange}
+        ></input>
       </BoxProperty>
     );
   };

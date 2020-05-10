@@ -38,7 +38,6 @@ export default function Code({
     return (
       <CodeLine
         key={index}
-        id={`CodeLine-${index + 1}`}
         highlightColor={highlightColor}
         isHighlighted={isHighlighted}
         onMouseOver={() => handleCodeLineMouseOver(index)}
@@ -99,7 +98,6 @@ const CodeLine = styled.pre<{ isHighlighted: boolean; highlightColor: string }>`
 
 const LineNumber = styled.div`
   padding: 0.1em 0;
-  opacity: 0.5;
   font-size: 0.8em;
   flex: 0 0 3em;
   user-select: none;
