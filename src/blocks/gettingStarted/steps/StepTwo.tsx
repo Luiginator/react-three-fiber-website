@@ -21,15 +21,15 @@ export default function StepTwo({
 
   return (
     <div>
-      Let's make a re-usable <Label>Box</Label>
-      <Select onChange={handleChangeGeometry}>
+      Let's make a re-usable <Label htmlFor="geometry-select">Box</Label>
+      <Select id="geometry-select" onChange={handleChangeGeometry}>
         <option value="box">Box</option>
         <option value="cylinder">Cylinder</option>
       </Select>
       component that has it's own state, reacts to user-input and participates
       in the render-loop. As a material we use the
-      <Label>Material</Label>
-      <Select onChange={handleChangeMaterial}>
+      <Label htmlFor="material-seleect">Material</Label>
+      <Select id="material-seleect" onChange={handleChangeMaterial}>
         <option value="meshStandardMaterial">Standard Material</option>
         <option value="meshBasicMaterial">Basic Material</option>
         <option value="meshPhysicalMaterial">Physical Material</option>
@@ -48,6 +48,12 @@ const Select = styled.select`
   }
 `;
 
+// hidden but present for accessibility
 const Label = styled.label`
-  display: none;
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  clip: rect(1px 1px 1px 1px);
+  clip: rect(1px, 1px, 1px, 1px);
 `;

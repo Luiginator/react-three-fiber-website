@@ -12,7 +12,7 @@ export const prismTheme = css`
   .token.prolog,
   .token.doctype,
   .token.cdata {
-    color: #9294a3;
+    color: #ececec;
   }
 
   .token.punctuation {
@@ -23,7 +23,7 @@ export const prismTheme = css`
   .token.tag,
   .token.namespace,
   .token.deleted {
-    color: #75f7a6;
+    color: #4ae08c;
   }
 
   .token.function-name {
@@ -34,21 +34,21 @@ export const prismTheme = css`
   .token.boolean,
   .token.number,
   .token.function {
-    color: #0e9aa7;
+    color: #19b5fe;
   }
 
   .token.property,
   .token.class-name,
   .token.constant,
   .token.symbol {
-    color: #0e9aa7;
+    color: #6bb9f0;
   }
 
   .token.important,
   .token.atrule,
   .token.keyword,
   .token.builtin {
-    color: #f6cd61;
+    color: #daa520;
   }
 
   .token.string,
@@ -62,7 +62,7 @@ export const prismTheme = css`
   .token.operator,
   .token.entity,
   .token.url {
-    color: #ff8d58;
+    color: #f89406;
   }
 
   .token.important,
@@ -116,7 +116,7 @@ export const prismTheme = css`
 
   .line-numbers-rows > span:before {
     content: counter(linenumber);
-    color: #8c9cad;
+    color: #ffffff;
     display: block;
     padding-right: 0.8em;
     text-align: right;
