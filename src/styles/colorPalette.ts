@@ -7,6 +7,4 @@ const colors = [
   '#854442',
 ];
 
-const colorPalette = [...colors, ...colors, ...colors];
-
-export default colorPalette;
+export const colorPalette = [...colors, ...colors, ...colors];

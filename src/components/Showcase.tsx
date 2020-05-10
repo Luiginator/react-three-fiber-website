@@ -3,10 +3,7 @@ import dynamic from 'next/dynamic';
 import styled from 'styled-components';
 import { partial } from 'lodash';
 
-import { device } from '@styles/screens';
-import { fontSize } from '@styles/typography';
-import { color } from '@styles/colors';
-import { space } from '@styles/spacing';
+import { color, device, fontSize, space } from '@styles';
 
 const exampleImportOptions = { ssr: false };
 
@@ -100,7 +97,7 @@ const StepBullet = styled.div<{ active: boolean }>`
   width: 20px;
   height: 20px;
   border-radius: 100%;
-  margin-left: 15px;
+  margin-left: ${space.small};
   transition: all 100ms linear;
   cursor: pointer;
 

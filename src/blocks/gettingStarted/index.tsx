@@ -2,17 +2,16 @@ import React, { useState } from 'react';
 import styled from 'styled-components';
 import { range } from 'lodash';
 
-import colorPalette from '@styles/colorPalette';
 import CodeExplainer from '@components/CodeExplainer';
 import Preview from '@components/Preview';
+import { Container } from '@components/Grid';
+import { H2 } from '@components/Typography';
+import CodeComparison from '@components/CodeComparison';
 import { getCode } from './code';
 import StepOne from './steps/StepOne';
 import StepTwo from './steps/StepTwo';
 import { StepThree } from './steps/StepThree';
-import { Container } from '@components/Grid';
-import { H2 } from '@components/Typography';
-import { space } from '@styles/spacing';
-import CodeComparison from '@components/CodeComparison';
+import { colorPalette, device, space } from '@styles';
 
 import threejsCode from './Three.raw';
 import reactThreeFiberCode from './ReactThreeFiber.raw';
@@ -70,7 +69,7 @@ export default function GettingStarted() {
         ]}
         code={getCode(geometryType, material, boxes)}
       />
-      <Container>
+      <CodeComparisonWrapper>
         <H2 style={{ marginTop: '100px' }}>
           From Threejs to react-three-fiber
         </H2>
@@ -79,7 +78,7 @@ export default function GettingStarted() {
           codeRight={reactThreeFiberCode}
           comparisons={codeComparisons}
         />
-      </Container>
+      </CodeComparisonWrapper>
     </GettingStartedSectionWrapper>
   );
 }
@@ -106,5 +105,15 @@ const codeComparisons = [
 const GettingStartedSectionWrapper = styled.div`
   background: black;
   min-height: 100vh;
-  padding: ${space.large} 15px;
+  padding: ${space.large} ${space.small};
+`;
+
+const CodeComparisonWrapper = styled.div`
+  display: none;
+  margin: 0 auto;
+  width: 100%;
+
+  ${device.extraLarge} {
+    display: block;
+  }
 `;

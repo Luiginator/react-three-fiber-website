@@ -1,7 +1,6 @@
 import styled from 'styled-components';
-import { fontSize } from '@styles/typography';
-import { space } from '@styles/spacing';
-import { color } from '@styles/colors';
+
+import { color, fontSize, space } from '@styles';
 
 export const H2 = styled.h2`
   font-size: ${fontSize.xxLarge};

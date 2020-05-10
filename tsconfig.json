@@ -16,6 +16,7 @@
     "baseUrl": ".",
     "paths": {
       "@styles/*": ["src/styles/*"],
+      "@styles": ["src/styles/index"],
       "@icons/*": ["src/icons/*"],
       "@components/*": ["src/components/*"]
     }

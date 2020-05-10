@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
-import { space } from '@styles/spacing';
-import { color } from '@styles/colors';
+
+import { color, space } from '@styles';
 
 export default function Footer() {
   const [showDialog, setShowDialog] = useState(false);
@@ -74,7 +74,7 @@ function IconAuthor({ url, name }) {
 }
 
 const IconAuthorWrapper = styled.div`
-  padding-top: 15px;
+  padding-top: ${space.small};
 `;
 
 const DialogWrapper = styled.div`

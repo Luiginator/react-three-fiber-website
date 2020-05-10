@@ -1,7 +1,8 @@
-import React, { useRef } from 'react';
+import React from 'react';
 import { partial } from 'lodash';
 import { rgba } from 'polished';
-import colorPalette from '@styles/colorPalette';
+
+import { colorPalette } from '@styles';
 
 const sankeyStartY = -34;
 const sankeyStartX = 0;
