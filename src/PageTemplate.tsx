@@ -1,7 +1,9 @@
 import React from "react";
 import styled from "styled-components";
+
 import { device } from "@styles/screens";
 import GithubBadge from "@components/GithubBadge";
+import Footer from "@components/Footer";
 import useWindowScrollPosition from "./hooks/useScrollPosition";
 
 type TPageTemplateProps = {
@@ -17,6 +19,7 @@ export default function PageTemplate({ children }: TPageTemplateProps) {
       <GithubLogoPosition large={y === 0}>
         <GithubBadge />
       </GithubLogoPosition>
+      <Footer />
     </div>
   );
 }

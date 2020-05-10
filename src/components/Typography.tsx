@@ -10,3 +10,7 @@ export const H2 = styled.h2`
   padding-bottom: ${space.large};
   text-align: center;
 `;
+
+export const H2Dark = styled(H2)`
+  color: ${color.darkPrimary};
+`;

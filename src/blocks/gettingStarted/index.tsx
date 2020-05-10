@@ -12,6 +12,7 @@ import { StepThree } from "./steps/StepThree";
 import { Container } from "@components/Grid";
 import { H2 } from "@components/Typography";
 import Highlighted from "@components/Highlighted";
+import { space } from "@styles/spacing";
 
 let colors = [...colorPalette];
 const initialBoxes = [
@@ -75,5 +76,5 @@ export default function GettingStarted() {
 const GettingStartedSectionWrapper = styled.div`
   background: black;
   min-height: 100vh;
-  padding: 80px 15px;
+  padding: ${space.large} 15px;
 `;
