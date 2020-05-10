@@ -8,7 +8,7 @@
     "start": "next start",
     "lint": "tslint -c tslint.json 'src/**/*.{ts,tsx}'",
     "lint-fix": "tslint --fix -c tslint.json 'src/**/*.{ts,tsx}' -t verbose",
-    "prettier": "prettier"
+    "prettier": "prettier './src/**/*.{ts,tsx}' --write"
   },
   "dependencies": {
     "@types/styled-components": "^5.1.0",
