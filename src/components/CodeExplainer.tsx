@@ -1,14 +1,14 @@
-import React, { useState } from "react";
-import styled from "styled-components";
-import { partial } from "lodash";
+import React, { useState } from 'react';
+import styled from 'styled-components';
+import { partial } from 'lodash';
 
-import Code from "./code/Code";
-import { rgba } from "polished";
+import Code from './code/Code';
+import { rgba } from 'polished';
 
-import { device } from "@styles/screens";
-import colorPalette from "@styles/colorPalette";
-import { space } from "@styles/spacing";
-import { fontSize } from "@styles/typography";
+import { device } from '@styles/screens';
+import colorPalette from '@styles/colorPalette';
+import { space } from '@styles/spacing';
+import { fontSize } from '@styles/typography';
 
 type TCodeGroup = {
   lines: number[];
@@ -26,14 +26,14 @@ export default function CodeExplainer({
   codeGroups,
 }: TCodeExplainerProps) {
   const [highlightedCode, setHighlightedCode] = useState(-1);
-  const highlightGroups = codeGroups.map((group, i) => ({
-    lines: group.lines.map((i) => i - 1),
-    color: colorPalette[i],
+  const highlightGroups = codeGroups.map((group, index) => ({
+    lines: group.lines.map((line) => line - 1),
+    color: colorPalette[index],
   }));
   const currentSelection = highlightGroups[highlightedCode];
 
-  const handleStepMouseOver = (i: number): void => {
-    setHighlightedCode(i);
+  const handleStepMouseOver = (index: number): void => {
+    setHighlightedCode(index);
   };
 
   const handleStepMouseOut = (): void => {
@@ -42,7 +42,7 @@ export default function CodeExplainer({
 
   const handleHoverLine = (line: number): void => {
     const selectionIndex = highlightGroups.findIndex(
-      (element) => element.lines.indexOf(line) > -1
+      (element) => element.lines.indexOf(line) > -1,
     );
     setHighlightedCode(selectionIndex);
   };

@@ -1,5 +1,5 @@
-import React, { useRef, useState } from "react";
-import { Canvas, useFrame } from "react-three-fiber";
+import React, { useRef, useState } from 'react';
+import { Canvas, useFrame } from 'react-three-fiber';
 
 const typeGeometryMap = {
   box: <boxBufferGeometry attach="geometry" args={[3, 3, 3]} />,
@@ -13,8 +13,10 @@ function Box({ position, type, material, rotationSpeed, color }) {
   useFrame(
     () =>
       ((mesh.current as any).rotation.x = (mesh.current as any).rotation.y +=
-        rotationSpeed / 100)
+        rotationSpeed / 100),
   );
+
+  const handleClickMesh = () => setActive(!active);
 
   const Material = material;
 
@@ -23,7 +25,7 @@ function Box({ position, type, material, rotationSpeed, color }) {
       position={position}
       ref={mesh}
       scale={active ? [1.2, 1.2, 1.2] : [1, 1, 1]}
-      onClick={(e) => setActive(!active)}
+      onClick={handleClickMesh}
     >
       {typeGeometryMap[type]}
       <Material attach="material" color={color} />
@@ -35,7 +37,7 @@ export default function Preview({ type, material, boxes }) {
   return (
     <Canvas
       camera={{ position: [0, -5, 8], fov: 50 }}
-      style={{ height: "200px" }}
+      style={{ height: '200px' }}
     >
       <ambientLight />
       <pointLight position={[10, 10, 10]} />

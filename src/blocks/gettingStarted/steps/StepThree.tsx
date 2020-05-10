@@ -1,15 +1,15 @@
-import React from "react";
-import styled from "styled-components";
-import { random } from "lodash";
-import colorPalette from "@styles/colorPalette";
-import { TBox } from "../code";
-import { space } from "@styles/spacing";
-import { color } from "@styles/colors";
-import { fontSize } from "@styles/typography";
+import React from 'react';
+import styled from 'styled-components';
+import { random } from 'lodash';
+import colorPalette from '@styles/colorPalette';
+import { TBox } from '../code';
+import { space } from '@styles/spacing';
+import { color } from '@styles/colors';
+import { fontSize } from '@styles/typography';
 
-let colors = [...colorPalette];
+const colors = [...colorPalette];
 colors.shift();
-let spawnXPositions = [6, -6, 12, -12];
+const spawnXPositions = [6, -6, 12, -12];
 const maximumBoxes = 5;
 
 export function StepThree({ boxes, setBoxes }) {
@@ -29,9 +29,9 @@ export function StepThree({ boxes, setBoxes }) {
 
   const handleClickChangeX = (
     e: React.ChangeEvent<HTMLInputElement>,
-    i: number
+    i: number,
   ) => {
-    const newValue = parseInt(e.target.value);
+    const newValue = parseInt(e.target.value, 10);
 
     const newBoxes = boxes.map((box, j) => {
       if (i === j) {
@@ -49,7 +49,7 @@ export function StepThree({ boxes, setBoxes }) {
 
   const handleClickRotationSpeed = (
     e: React.ChangeEvent<HTMLInputElement>,
-    i: number
+    i: number,
   ) => {
     const newSpeed = e.target.value;
 
@@ -63,11 +63,11 @@ export function StepThree({ boxes, setBoxes }) {
   const renderAddBox = (box: TBox, i: number): React.ReactNode => {
     return (
       <Box key={i} color={box.color}>
-        {renderPropertyInput("X", box.position[0], (e) =>
-          handleClickChangeX(e, i)
+        {renderPropertyInput('X', box.position[0], (e) =>
+          handleClickChangeX(e, i),
         )}
-        {renderPropertyInput("S", box.rotationSpeed, (e) =>
-          handleClickRotationSpeed(e, i)
+        {renderPropertyInput('S', box.rotationSpeed, (e) =>
+          handleClickRotationSpeed(e, i),
         )}
       </Box>
     );
@@ -76,17 +76,12 @@ export function StepThree({ boxes, setBoxes }) {
   const renderPropertyInput = (
     label: string,
     value: number,
-    onChange: (e: React.ChangeEvent<HTMLInputElement>) => void
+    onChange: (e: React.ChangeEvent<HTMLInputElement>) => void,
   ): React.ReactNode => {
     return (
       <BoxProperty>
         <label htmlFor={label}>{label}:</label>
-        <input
-          type="number"
-          id={label}
-          value={value}
-          onChange={onChange}
-        ></input>
+        <input type="number" id={label} value={value} onChange={onChange} />
       </BoxProperty>
     );
   };

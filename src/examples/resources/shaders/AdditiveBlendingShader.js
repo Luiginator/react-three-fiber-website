@@ -21,4 +21,4 @@ export default {
       gl_FragColor = color + add;
     }
   `,
-}
+};

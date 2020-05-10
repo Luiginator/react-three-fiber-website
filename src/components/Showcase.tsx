@@ -1,19 +1,19 @@
-import React, { useState } from "react";
-import dynamic from "next/dynamic";
-import styled from "styled-components";
-import { partial } from "lodash";
+import React, { useState } from 'react';
+import dynamic from 'next/dynamic';
+import styled from 'styled-components';
+import { partial } from 'lodash';
 
-import { device } from "@styles/screens";
-import { fontSize } from "@styles/typography";
-import { color } from "@styles/colors";
-import { space } from "@styles/spacing";
+import { device } from '@styles/screens';
+import { fontSize } from '@styles/typography';
+import { color } from '@styles/colors';
+import { space } from '@styles/spacing';
 
 const exampleImportOptions = { ssr: false };
 
-const Swarm = dynamic(() => import("../examples/swarm"), exampleImportOptions);
+const Swarm = dynamic(() => import('../examples/swarm'), exampleImportOptions);
 const RotatingBoxes = dynamic(
-  () => import("../examples/rotating_boxes"),
-  exampleImportOptions
+  () => import('../examples/rotating_boxes'),
+  exampleImportOptions,
 );
 
 type TShowcase = {
@@ -22,8 +22,8 @@ type TShowcase = {
 };
 
 const showcases: TShowcase[] = [
-  { component: Swarm, name: "Swarm" },
-  { component: RotatingBoxes, name: "Instanced Mesh" },
+  { component: Swarm, name: 'Swarm' },
+  { component: RotatingBoxes, name: 'Instanced Mesh' },
 ];
 
 export default function ShowcaseSlider() {
@@ -105,7 +105,7 @@ const StepBullet = styled.div<{ active: boolean }>`
   cursor: pointer;
 
   background: ${(props) =>
-    props.active ? color.lightPrimary : "rgba(255, 255, 255, 0.4)"};
+    props.active ? color.lightPrimary : 'rgba(255, 255, 255, 0.4)'};
 
   &:hover {
     background: ${color.lightPrimary};

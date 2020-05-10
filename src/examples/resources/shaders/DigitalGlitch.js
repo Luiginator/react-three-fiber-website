@@ -89,6 +89,6 @@ var DigitalGlitch = {
     '}',
     '}',
   ].join('\n'),
-}
+};
 
-export { DigitalGlitch }
+export { DigitalGlitch };

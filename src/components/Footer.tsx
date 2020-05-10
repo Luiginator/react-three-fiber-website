@@ -1,7 +1,7 @@
-import React, { useState } from "react";
-import styled from "styled-components";
-import { space } from "@styles/spacing";
-import { color } from "@styles/colors";
+import React, { useState } from 'react';
+import styled from 'styled-components';
+import { space } from '@styles/spacing';
+import { color } from '@styles/colors';
 
 export default function Footer() {
   const [showDialog, setShowDialog] = useState(false);
@@ -63,10 +63,10 @@ function IconAuthor({ url, name }) {
     <IconAuthorWrapper>
       <a href={url} title={name}>
         {name}
-      </a>{" "}
-      from{" "}
+      </a>{' '}
+      from{' '}
       <a href="https://www.flaticon.com/de/" title="Flaticon">
-        {" "}
+        {' '}
         www.flaticon.com
       </a>
     </IconAuthorWrapper>
