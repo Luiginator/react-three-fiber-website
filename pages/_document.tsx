@@ -36,7 +36,7 @@ export default class Document extends NextDocument {
     const keywords =
       "ThreeJS, React, react-three-fiber, reconciler, react-native";
     const url = "https://www.react-three-fiber.com";
-    const image = "/react-three-fiber.jpg";
+    const image = "/react-three-fiber.png";
 
     return (
       <Html lang="en">
