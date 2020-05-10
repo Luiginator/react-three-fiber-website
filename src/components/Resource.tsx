@@ -4,11 +4,13 @@ import { fontSize } from "@styles/typography";
 import { space } from "@styles/spacing";
 import { color } from "@styles/colors";
 
-type TResourceProps = {
+export type TResource = {
   readonly title: string;
   readonly description: string;
   readonly url: string;
 };
+
+type TResourceProps = TResource;
 
 export default function Resource({ title, description, url }: TResourceProps) {
   const hostname = new URL(url).hostname;

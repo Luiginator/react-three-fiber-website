@@ -3,14 +3,14 @@ import styled from "styled-components";
 
 import { fontSize } from "@styles/typography";
 import { Container, Row, Column } from "@components/Grid";
-import Resource from "@components/Resource";
+import Resource, { TResource } from "@components/Resource";
 import { H2Dark } from "@components/Typography";
 import Highlighted from "@components/Highlighted";
 import { space } from "@styles/spacing";
 import { device } from "@styles/screens";
 
 type TCommunityResourcesProps = {
-  readonly resources: { title: string; entries: any[] }[];
+  readonly resources: { title: string; entries: TResource[] }[];
 };
 
 export default function CommunityResources({
@@ -47,7 +47,7 @@ const CommunityResourceWrapper = styled(Container)`
 
 const CommunityResourceHeadline = styled.h3`
   font-size: ${fontSize.xLarge};
-  padding-bottom: 10px;
+  padding-bottom: ${space.small};
   min-height: 100px;
-  padding-top: 25px;
+  padding-top: ${space.medium};
 `;
