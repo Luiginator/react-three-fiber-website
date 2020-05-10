@@ -21,7 +21,7 @@ const HeroBoxWrapper = styled.div`
   background: ${color.darkPrimary};
   padding: ${space.small};
   position: absolute;
-  bottom: 0;
+  bottom: -${space.small};
 
   ${device.large} {
     max-width: 400px;

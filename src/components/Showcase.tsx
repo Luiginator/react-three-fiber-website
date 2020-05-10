@@ -38,24 +38,30 @@ export default function ShowcaseSlider() {
 
   return (
     <Showcase>
-      <Component />
-      <Step>
-        <StepName>{name}</StepName>
-        <StepNavigation>{showcases.map(renderShowcaseStep)}</StepNavigation>
-      </Step>
+      <ShowcaseInner>
+        <Component />
+        <Step>
+          <StepName>{name}</StepName>
+          <StepNavigation>{showcases.map(renderShowcaseStep)}</StepNavigation>
+        </Step>
+      </ShowcaseInner>
     </Showcase>
   );
 }
 
 const Showcase = styled.div`
-  height: 100%;
   width: 100%;
+  min-height: calc(100vh - 2 * ${space.small});
 
   canvas {
-    height: 100vh;
+    height: calc(100vh - 2 * ${space.small});
     width: 100vw;
-    padding: ${space.small};
   }
+`;
+
+const ShowcaseInner = styled.div`
+  background: ${color.darkPrimary};
+  margin: ${space.small};
 `;
 
 const Step = styled.div`

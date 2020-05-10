@@ -16,6 +16,7 @@ function App({ Component, pageProps }) {
     <div>
       <Head>
         <title>{title}</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="og:type" content="website" />
         <meta name="description" content={description} />
         <meta name="og:title" content={title} />
