@@ -16,6 +16,8 @@ function Box({ position, type, material, rotationSpeed, color }) {
         rotationSpeed / 100),
   );
 
+  const handleClickMesh = () => setActive(!active);
+
   const Material = material;
 
   return (
@@ -23,7 +25,7 @@ function Box({ position, type, material, rotationSpeed, color }) {
       position={position}
       ref={mesh}
       scale={active ? [1.2, 1.2, 1.2] : [1, 1, 1]}
-      onClick={(e) => setActive(!active)}
+      onClick={handleClickMesh}
     >
       {typeGeometryMap[type]}
       <Material attach="material" color={color} />

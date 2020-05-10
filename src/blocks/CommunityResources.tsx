@@ -19,13 +19,13 @@ export default function CommunityResources({
     <CommunityResourceWrapper>
       <H2Dark>How to proceed?</H2Dark>
       <Row>
-        {resources.map((resourceColumn) => (
-          <Column className="col-12 col-lg-4">
+        {resources.map((resourceColumn, index) => (
+          <Column className="col-12 col-lg-4" key={index}>
             <CommunityResourceHeadline>
               {resourceColumn.title}
             </CommunityResourceHeadline>
-            {resourceColumn.entries.map((entry) => (
-              <Resource {...entry} />
+            {resourceColumn.entries.map((entry, resourceIndex) => (
+              <Resource {...entry} key={resourceIndex} />
             ))}
           </Column>
         ))}

@@ -24,7 +24,7 @@ export function getCode(
 
   return `  import React, { useRef, useState } from 'react'
   import { Canvas, useFrame } from 'react-three-fiber'
-  
+
   ${getBoxCode(name, constructor, material)}
   ${getAppCode(boxes)}
 `;
@@ -34,9 +34,9 @@ function getBoxCode(name: string, constructor: string, material: string) {
   return `function Box({ position, rotationSpeed, color }) {
         const mesh = useRef()
         const [active, setActive] = useState(false)
-    
+
         useFrame(() => (mesh.current.rotation.x = mesh.current.rotation.y += rotationSpeed / 100))
-    
+
         return (
             <mesh
                 position={position}

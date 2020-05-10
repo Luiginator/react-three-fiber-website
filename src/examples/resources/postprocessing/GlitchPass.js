@@ -23,7 +23,7 @@ var GlitchPass = function (dt_size) {
   var shader = DigitalGlitch;
   this.uniforms = UniformsUtils.clone(shader.uniforms);
   if (dt_size === undefined) dt_size = 64;
-  this.uniforms['tDisp'].value = this.generateHeightmap(dt_size);
+  this.uniforms.tDisp.value = this.generateHeightmap(dt_size);
   this.material = new ShaderMaterial({
     uniforms: this.uniforms,
     vertexShader: shader.vertexShader,
@@ -42,18 +42,18 @@ GlitchPass.prototype = Object.assign(Object.create(Pass.prototype), {
 
   render: function (renderer, writeBuffer, readBuffer, deltaTime, maskActive) {
     const factor = Math.max(0, this.factor);
-    this.uniforms['tDiffuse'].value = readBuffer.texture;
-    this.uniforms['seed'].value = Math.random() * factor; //default seeding
-    this.uniforms['byp'].value = 0;
+    this.uniforms.tDiffuse.value = readBuffer.texture;
+    this.uniforms.seed.value = Math.random() * factor; //default seeding
+    this.uniforms.byp.value = 0;
     if (factor) {
-      this.uniforms['amount'].value = (Math.random() / 90) * factor;
-      this.uniforms['angle'].value =
+      this.uniforms.amount.value = (Math.random() / 90) * factor;
+      this.uniforms.angle.value =
         _Math.randFloat(-Math.PI, Math.PI) * factor;
-      this.uniforms['distortion_x'].value = _Math.randFloat(0, 1) * factor;
-      this.uniforms['distortion_y'].value = _Math.randFloat(0, 1) * factor;
-      this.uniforms['seed_x'].value = _Math.randFloat(-0.3, 0.3) * factor;
-      this.uniforms['seed_y'].value = _Math.randFloat(-0.3, 0.3) * factor;
-    } else this.uniforms['byp'].value = 1;
+      this.uniforms.distortion_x.value = _Math.randFloat(0, 1) * factor;
+      this.uniforms.distortion_y.value = _Math.randFloat(0, 1) * factor;
+      this.uniforms.seed_x.value = _Math.randFloat(-0.3, 0.3) * factor;
+      this.uniforms.seed_y.value = _Math.randFloat(-0.3, 0.3) * factor;
+    } else this.uniforms.byp.value = 1;
     this.quad.material = this.material;
     if (this.renderToScreen) {
       renderer.setRenderTarget(null);

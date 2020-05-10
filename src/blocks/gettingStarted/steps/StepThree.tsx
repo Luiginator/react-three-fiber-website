@@ -7,9 +7,9 @@ import { space } from '@styles/spacing';
 import { color } from '@styles/colors';
 import { fontSize } from '@styles/typography';
 
-let colors = [...colorPalette];
+const colors = [...colorPalette];
 colors.shift();
-let spawnXPositions = [6, -6, 12, -12];
+const spawnXPositions = [6, -6, 12, -12];
 const maximumBoxes = 5;
 
 export function StepThree({ boxes, setBoxes }) {
@@ -31,7 +31,7 @@ export function StepThree({ boxes, setBoxes }) {
     e: React.ChangeEvent<HTMLInputElement>,
     i: number,
   ) => {
-    const newValue = parseInt(e.target.value);
+    const newValue = parseInt(e.target.value, 10);
 
     const newBoxes = boxes.map((box, j) => {
       if (i === j) {
@@ -81,12 +81,7 @@ export function StepThree({ boxes, setBoxes }) {
     return (
       <BoxProperty>
         <label htmlFor={label}>{label}:</label>
-        <input
-          type="number"
-          id={label}
-          value={value}
-          onChange={onChange}
-        ></input>
+        <input type="number" id={label} value={value} onChange={onChange} />
       </BoxProperty>
     );
   };

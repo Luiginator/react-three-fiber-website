@@ -21,7 +21,7 @@ var WaterPass = function (dt_size) {
   var shader = WaterShader;
   this.uniforms = UniformsUtils.clone(shader.uniforms);
   if (dt_size === undefined) dt_size = 64;
-  this.uniforms['resolution'].value = new Vector2(dt_size, dt_size);
+  this.uniforms.resolution.value = new Vector2(dt_size, dt_size);
   this.material = new ShaderMaterial({
     uniforms: this.uniforms,
     vertexShader: shader.vertexShader,
@@ -41,10 +41,10 @@ WaterPass.prototype = Object.assign(Object.create(Pass.prototype), {
 
   render: function (renderer, writeBuffer, readBuffer, deltaTime, maskActive) {
     const factor = Math.max(0, this.factor);
-    this.uniforms['byp'].value = factor ? 0 : 1;
-    this.uniforms['texture'].value = readBuffer.texture;
-    this.uniforms['time'].value = this.time;
-    this.uniforms['factor'].value = this.factor;
+    this.uniforms.byp.value = factor ? 0 : 1;
+    this.uniforms.texture.value = readBuffer.texture;
+    this.uniforms.time.value = this.time;
+    this.uniforms.factor.value = this.factor;
     this.time += 0.05;
     this.quad.material = this.material;
     if (this.renderToScreen) {

@@ -17,7 +17,7 @@ import CodeComparison from '@components/CodeComparison';
 import threejsCode from './Three.raw';
 import reactThreeFiberCode from './ReactThreeFiber.raw';
 
-let colors = [...colorPalette];
+const colors = [...colorPalette];
 const initialBoxes = [
   { position: [0, 0, 0], rotationSpeed: 1, color: colors.shift() },
 ];

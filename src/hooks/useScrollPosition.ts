@@ -3,33 +3,34 @@ import { throttle } from 'lodash';
 
 let supportsPassive = false;
 try {
-  var opts = Object.defineProperty({}, 'passive', {
-    get: function () {
+  const opts = Object.defineProperty({}, 'passive', {
+    get() {
       supportsPassive = true;
     },
   });
   window.addEventListener('testPassive', null, opts);
   window.removeEventListener('testPassive', null, opts);
+  // tslint:disable-next-line: no-empty
 } catch (e) {}
 
-let getPosition = () => ({
+const getPosition = () => ({
   x: window.pageXOffset,
   y: window.pageYOffset,
 });
 
-let defaultOptions = {
+const defaultOptions = {
   throttle: 100,
 };
 
 function useWindowScrollPosition(options?: any) {
   if (!process.browser) return { y: 0 };
 
-  let opts = Object.assign({}, defaultOptions, options);
+  const opts = { ...defaultOptions, ...options };
 
-  let [position, setPosition] = useState(getPosition());
+  const [position, setPosition] = useState(getPosition());
 
   useEffect(() => {
-    let handleScroll = throttle(() => {
+    const handleScroll = throttle(() => {
       setPosition(getPosition());
     }, opts.throttle);
 

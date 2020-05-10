@@ -36,6 +36,8 @@ export default function CodeComparison({
     setActiveSelection(selection);
   };
 
+  const handleHoverSankey = (index) => setActiveSelection(index);
+
   const renderCode = (
     section: 'source' | 'target',
     title: string,
@@ -60,7 +62,7 @@ export default function CodeComparison({
         <CodeTitle>&nbsp;</CodeTitle>
         <Sankey
           codeLinks={comparisons}
-          handleHoverElement={(index) => setActiveSelection(index)}
+          handleHoverElement={handleHoverSankey}
         />
       </div>
     );

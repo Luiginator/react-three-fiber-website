@@ -1,6 +1,7 @@
 import React, { useRef, useEffect } from 'react';
 import styled from 'styled-components';
 import { rgba } from 'polished';
+import { partial } from 'lodash';
 
 import Prism from './prism.js';
 import { prismTheme } from './prismTheme';
@@ -29,7 +30,11 @@ export default function Code({
   }, [wrapper, code]);
 
   const handleCodeLineMouseOver = (index: number): void => {
-    onHoverLine && onHoverLine(index);
+    if (onHoverLine) onHoverLine(index);
+  };
+
+  const handleOnMouseLineOver = (index) => {
+    handleCodeLineMouseOver(index);
   };
 
   const renderCodeLine = (codeLine: string, index: number): React.ReactNode => {
@@ -40,7 +45,7 @@ export default function Code({
         key={index}
         highlightColor={highlightColor}
         isHighlighted={isHighlighted}
-        onMouseOver={() => handleCodeLineMouseOver(index)}
+        onMouseOver={partial(handleOnMouseLineOver, index)}
       >
         <LineNumber>{index + 1}</LineNumber>
         <code data-line-index={index}>{codeLine}</code>

@@ -2,5 +2,9 @@
   "extends": ["tslint:latest", "tslint-react"],
   "linterOptions": {
     "exclude": ["node_modules/**/*", "**/prism.js"]
+  },
+  "rules": {
+    "no-implicit-dependencies": false,
+    "no-submodule-imports": false
   }
 }
