@@ -11,6 +11,7 @@
     "@types/styled-components": "^5.1.0",
     "@zeit/next-sass": "^1.0.1",
     "bootstrap": "^4.4.1",
+    "classnames": "^2.2.6",
     "lodash": "^4.17.15",
     "next": "9.3.6",
     "nice-color-palettes": "^3.0.0",
